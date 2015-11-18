@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+  <head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <style type="text/css">
+  body { background-color: white; }
+</style>
+
+
+    <script type="text/javascript">      
+  function myFunction(){
+    $.post('https://api.thingspeak.com/talkbacks/4103/commands.json?apikey=MZPKLMT4PHH5DRK4&command_string=ON&position=1');
+  }
+  function turnOff(){
+    $.post('https://api.thingspeak.com/talkbacks/4103/commands.json?apikey=MZPKLMT4PHH5DRK4&command_string=OFF&position=1');
+  }
+</script>
+
+
+
+</head>
+<body>
+  LED ON/OFF<br>
+  <button onclick="myFunction()">Turn ON</button>
+  <button onclick="turnOff()">Turn OFF</button>
+  <br><a href=https://api.thingspeak.com/talkbacks/4103/commands?api_key=MZPKLMT4PHH5DRK4>List all commands</a>
+  <br><a href=https://api.thingspeak.com/talkbacks/4103/commands/last?api_key=MZPKLMT4PHH5DRK4>Get last executed</a>
+</body>
+</html>
+
+
